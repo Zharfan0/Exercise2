@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Javascript</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="CSS/survey.css">
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <div class="header">
+                <h3 style="text-align: center; color: #07074D;">PENDAFTARAN PEMINATAN</h3>
+            </div>
+            <form onsubmit="event.preventDefault(); kirimData();">
+                <label for="nama" class="formbold-form-label">Nama</label>
+                <input type="text" placeholder="Nama anda" id="nama" class="formbold-form-input">
+                <label for="nim" class="formbold-form-label">NIM</label>
+                <input type="text" placeholder="NIM anda" id="nim" class="formbold-form-input">
+                <p class="formbold-form-label">Peminatan Pada Bidang:</p>
+                <div class="formbold-radio-flex">
+                    <label class="formbold-radio-label">
+                        <input type="radio" name="peminatan" id="Programing" value="Programing" class="formbold-input-radio">
+                        Programing
+                        <span class="formbold-radio-checkmark"></span>
+                    </label>
+                    <label class="formbold-radio-label">
+                        <input type="radio" name="peminatan" id="Desain" value="Desain" class="formbold-input-radio">
+                        Desain
+                        <span class="formbold-radio-checkmark"></span>
+                    </label>
+                    <label class="formbold-radio-label">
+                        <input type="radio" name="peminatan" id="Jaringan" value="Jaringan" class="formbold-input-radio">
+                        Jaringan
+                        <span class="formbold-radio-checkmark"></span>
+                    </label>
+                    <label class="formbold-radio-label">
+                        <input type="radio" name="peminatan" id="Data" value="Data" class="formbold-input-radio">
+                        Data
+                        <span class="formbold-radio-checkmark"></span>
+                    </label>
+                </div>
+                <label for="angkatan" class="formbold-form-label">Angkatan</label>
+                <select name="angkatan" id="angkatan" class="formbold-select">
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                </select>
+                <label for="tanggal" class="formbold-form-label">Tanggal</label>
+                <input type="date" id="tanggal" class="formbold-form-input">
+                <label for="alamat" class="formbold-form-label">Alamat</label>
+                <textarea name="alamat" id="alamat" placeholder="Tulis alamat mu disini" class="formbold-form-input" cols="30" rows="5"></textarea>
+                <label for="alasan" class="formbold-form-label">Alasan mengambil peminatan tersebut</label>
+                <textarea name="alasan" id="alasan" placeholder="Tulis alasan mu disini" class="formbold-form-input" cols="30" rows="5"></textarea>
+                <button type="submit" class="formbold-btn">Kirim</button>
+            </form>
+        </div>
+        <div id="result" class="result-wrapper">
+            <h3 style="text-align: center; color: #07074D;">Hasil Pendaftaran</h3>
+            <table class="result-table">
+                <tr>
+                    <th>Nama</th>
+                    <td id="result-nama"></td>
+                </tr>
+                <tr>
+                    <th>NIM</th>
+                    <td id="result-nim"></td>
+                </tr>
+                <tr>
+                    <th>Peminatan</th>
+                    <td id="result-peminatan"></td>
+                </tr>
+                <tr>
+                    <th>Angkatan</th>
+                    <td id="result-angkatan"></td>
+                </tr>
+                <tr>
+                    <th>Tanggal</th>
+                    <td id="result-tanggal"></td>
+                </tr>
+                <tr>
+                    <th>Alamat</th>
+                    <td id="result-alamat"></td>
+                </tr>
+                <tr>
+                    <th>Alasan</th>
+                    <td id="result-alasan"></td>
+                </tr>
+                <tr>
+                    <button type="submit" class="formbold-btn"><a href="index.html">BACK</a></button>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <button class="home" onclick="validateBeforeBack()">Kembali ke Home</button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"> </script>
+</body>
+</html>
